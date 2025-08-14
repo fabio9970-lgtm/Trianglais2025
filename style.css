@@ -1,1 +1,102 @@
-/* Add styles here */
+/* styles.css */
+
+:root {
+ --primary-color: #007bff; /* A modern blue */
+ --secondary-color: #6c757d; /* A subtle grey */
+ --background-color: #ffffff; /* White background */
+ --text-color: #333333; /* Dark grey for text */
+ --heading-color: #1a1a1a; /* Even darker grey for headings */
+ --spacing-unit: 1rem;
+}
+
+body {
+ font-family: 'Arial', sans-serif; /* Modern and readable font */
+ line-height: 1.6;
+ margin: 0;
+ padding: 0;
+ background-color: var(--background-color);
+ color: var(--text-color);
+}
+
+h1, h2, h3 {
+ color: var(--heading-color);
+}
+
+/* Navigation Bar */
+nav {
+ background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+ padding: var(--spacing-unit) 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ justify-content: center;
+}
+
+nav ul li {
+ margin: 0 var(--spacing-unit);
+}
+
+nav ul li a {
+ text-decoration: none;
+ color: var(--heading-color);
+ font-weight: bold;
+ transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+ color: var(--primary-color);
+}
+
+/* Sections */
+section {
+ padding: calc(4 * var(--spacing-unit)) 0; /* More padding for sections */
+ text-align: center;
+}
+
+#hero {
+ background-color: #e9ecef; /* Light grey background for hero */
+ color: var(--heading-color);
+ padding: calc(8 * var(--spacing-unit)) 0; /* More padding for hero */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+#about, #courses, #contact {
+ padding: calc(4 * var(--spacing-unit)) var(--spacing-unit);
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+
+.fade-in {
+ animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ nav ul {
+ flex-direction: column;
+ }
+
+ nav ul li {
+ margin: var(--spacing-unit) 0.5rem;
+ }
+
+ section {
+ padding: calc(2 * var(--spacing-unit)) 0;
+ }
+}
