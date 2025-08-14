@@ -25,12 +25,13 @@ h1, h2, h3 {
 /* Navigation Bar */
 nav {
  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
- padding: var(--spacing-unit) 0;
+ padding: var(--spacing-unit) calc(2 * var(--spacing-unit)); /* Add horizontal padding */
  position: fixed;
+ height: 60px; /* Example height, adjust as needed */
  width: 100%;
  top: 0;
  z-index: 1000;
- box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle box shadow */
 }
 
 nav ul {
@@ -41,6 +42,7 @@ nav ul {
  justify-content: center;
 }
 
+
 nav ul li {
  margin: 0 var(--spacing-unit);
 }
@@ -50,27 +52,58 @@ nav ul li a {
  color: var(--heading-color);
  font-weight: bold;
  transition: color 0.3s ease;
+ padding: 0.5rem 0; /* Add padding for better click area */
+ display: block; /* Make the link a block for padding */
 }
-
 nav ul li a:hover {
  color: var(--primary-color);
 }
 
-/* Sections */
-section {
- padding: calc(4 * var(--spacing-unit)) 0; /* More padding for sections */
- text-align: center;
+/* Inclusive: Add a clear focus indicator for keyboard navigation */
+/* Keep it subtle and aligned with the minimalist design */
+nav ul li a:focus {
+ outline: none; /* Remove default outline */
+ box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Subtle outline using box-shadow */
 }
 
+main {
+  padding-top: 60px; /* Add padding equal to the fixed nav height */
+}
+
+/* Sections */
+
+/* Video Background for Hero */
 #hero {
+ position: relative; /* Needed for absolute positioning of the video */
+ overflow: hidden; /* Hide video overflow */
  background-color: #e9ecef; /* Light grey background for hero */
  color: var(--heading-color);
- padding: calc(8 * var(--spacing-unit)) 0; /* More padding for hero */
+ padding: 0; /* Remove padding here, content inside will have padding */
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
 }
+
+#hero video {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%); /* Center the video */
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ z-index: 1; /* Behind the content */
+ object-fit: cover; /* Ensure video covers the area without distortion */
+}
+
+/* Overlay for text readability */
+section {
+ padding: calc(4 * var(--spacing-unit)) 0; /* Restore padding for other sections */
+ text-align: center;
+}
+
 
 #about, #courses, #contact {
  padding: calc(4 * var(--spacing-unit)) var(--spacing-unit);
@@ -86,17 +119,38 @@ section {
  animation: fadeIn 1s ease-in-out;
 }
 
+/* Container for Hero content and overlay */
+#hero .hero-content {
+ position: relative;
+ z-index: 2; /* Above the video */
+ padding: calc(8 * var(--spacing-unit)) var(--spacing-unit); /* Padding for content */
+ background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white overlay */
+ width: 100%; /* Ensure content container covers the width */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
  nav ul {
  flex-direction: column;
+ text-align: center; /* Center text in mobile view */
  }
 
  nav ul li {
  margin: var(--spacing-unit) 0.5rem;
  }
 
+
  section {
  padding: calc(2 * var(--spacing-unit)) 0;
  }
 }
+
+@media (max-width: 480px) {
+ :root {
+ --spacing-unit: 0.8rem; /* Slightly smaller spacing on very small screens */
+ }
+
+ body {
+ font-size: 0.95rem; /* Slightly smaller base font size */
+ }
+}
+
