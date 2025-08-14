@@ -1,88 +1,234 @@
-/* styles.css */
+/*
+- Design System Implementation
+*/
 
+/* --- Variables (Based on the JSON design system) --- */
 :root {
- --primary-color: #007bff; /* A modern blue */
- --secondary-color: #6c757d; /* A subtle grey */
- --background-color: #ffffff; /* White background */
- --text-color: #333333; /* Dark grey for text */
- --heading-color: #1a1a1a; /* Even darker grey for headings */
- --spacing-unit: 1rem;
+ --header-height: 64px;
+  /* Color Palette */
+  --color-primary: #2962FF;
+  --color-primary-hover: #1E4BDB;
+  --color-secondary: #1A1A1A;
+  --color-background: #000000;
+  --color-background-secondary: #111111;
+  --color-surface: #1C1C1C;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B3B3B3;
+  --color-accent-positive: #00C853;
+  --color-accent-negative: #D50000;
+  --color-accent-warning: #FFD600;
+  --color-border: #2C2C2C;
+  --color-chart-green: #00FF85;
+  --color-chart-red: #FF3B3B;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+
+  /* Typography - Using specified fonts */
+  --font-family: 'Inter', 'Poppins', sans-serif;
 }
 
+/* --- Base Styles --- */
+
 body {
- font-family: 'Arial', sans-serif; /* Modern and readable font */
- line-height: 1.6;
+  /* Background color from JSON */
+  background-color: var(--color-background);
+  /* Default font-family, color, and line-height from body typography in JSON */
+  font-family: var(--font-family);
+  color: var(--color-text-secondary); /* Assuming body regular color */
+  font-size: 16px; /* Size from body.regular typography */
+  line-height: 1.5; /* Line height from body.regular typography */
+  font-weight: 400; /* Weight from body.regular typography */
+
  margin: 0;
  padding: 0;
- background-color: var(--background-color);
- color: var(--text-color);
 }
 
 h1, h2, h3 {
- color: var(--heading-color);
+ color: var(--color-text-primary);
+ font-family: var(--font-family); /* Ensure headings use the defined font family */
 }
 
-/* Navigation Bar */
+h1 {
+  font-size: 48px; /* Size from headings.h1 typography */
+  font-weight: 700; /* Weight from headings.h1 typography */
+  line-height: 1.2; /* Line height from headings.h1 typography */
+}
+h2 {
+  font-size: 32px; /* Size from headings.h2 typography */
+  font-weight: 600; /* Weight from headings.h2 typography */
+  line-height: 1.3; /* Line height from headings.h2 typography */
+}
+h3 {
+  font-size: 24px; /* Size from headings.h3 typography */
+  font-weight: 600; /* Weight from headings.h3 typography */
+  line-height: 1.3;
+}
+
+/* Styles for bold body text (if using a span or other element with a class) */
+p strong, .text-bold { /* Example classes for bold text */
+    font-weight: 600; /* Weight from body.bold typography */
+    color: var(--color-text-primary); /* Color from body.bold typography */
+}
+
+p {
+ margin-bottom: var(--spacing-sm);
+}
+
+/* --- Navigation Bar (Fixed Top) --- */
 nav {
- background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
- padding: var(--spacing-unit) calc(2 * var(--spacing-unit)); /* Add horizontal padding */
+ background-color: var(--color-background); 
+ height: var(--header-height); /* Height from layout.header */
+ color: var(--color-text-primary); /* Text color from layout.header */
+ padding: 0 var(--spacing-md); /* Use spacing variable */
  position: fixed;
- height: 60px; /* Example height, adjust as needed */
  width: 100%;
  top: 0;
- z-index: 1000;
- box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle box shadow */
-}
+ left: 0; /* Ensure it starts from the left edge */
+ z-index: 1000; /* Stay on top */
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* More prominent shadow than before */
+ display: flex; /* Use flexbox for alignment */
+ justify-content: space-between; /* Space out logo (if any) and menu */
+ align-items: center; /* Vertically align items */
+} /* Menu alignment can be handled within the ul or li styles if needed */
 
+/* Navigation Links Container */
 nav ul {
  list-style: none;
  padding: 0;
  margin: 0;
- display: flex;
- justify-content: center;
+ display: flex; /* Flex items (li) in a row */
+ align-items: center;
 }
 
-
+/* Navigation List Items */
 nav ul li {
- margin: 0 var(--spacing-unit);
+ margin-left: var(--spacing-md); /* Space between menu items */
 }
 
+/* Navigation Links */
 nav ul li a {
  text-decoration: none;
- color: var(--heading-color);
- font-weight: bold;
+ color: inherit; /* Inherit color from nav */
+ font-size: 16px; /* From button typography size */
+ font-weight: 600; /* From button typography weight */
+ line-height: 1.4; /* From button typography line_height */
  transition: color 0.3s ease;
- padding: 0.5rem 0; /* Add padding for better click area */
- display: block; /* Make the link a block for padding */
-}
-nav ul li a:hover {
- color: var(--primary-color);
 }
 
-/* Inclusive: Add a clear focus indicator for keyboard navigation */
-/* Keep it subtle and aligned with the minimalist design */
+nav ul li a:hover {
+ color: var(--color-primary); /* Example hover color */
+}
+
+/* Accessible Focus Indicator */
 nav ul li a:focus {
  outline: none; /* Remove default outline */
- box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Subtle outline using box-shadow */
+ box-shadow: 0 0 0 3px var(--color-primary-hover); /* Clear but not overly aggressive focus */
+ border-radius: var(--border-radius-sm); /* Use spacing variable */
 }
 
+/* --- Buttons (Based on the JSON design system) --- */
+/* Base button styles */
+button {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 16px; /* Size from button typography */
+  font-weight: 600; /* Weight from button typography */
+  line-height: 1.4; /* Line height from button typography */
+  text-decoration: none; /* Ensure no underline for button text */
+  cursor: pointer;
+  border: none;
+  text-transform: none; /* uppercase: false from button typography */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Primary button style */
+.btn-primary {
+  background-color: var(--color-primary); /* Background from buttons.primary */
+  color: #FFFFFF; /* text_color from buttons.primary */
+  padding: 12px 20px; /* padding from buttons.primary */
+  border-radius: var(--border-radius-md); /* radius from buttons.primary */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover); /* hover_background from buttons.primary */
+}
+
+/* Secondary button style */
+.btn-secondary {
+  background-color: var(--color-surface); /* Background from buttons.secondary */
+  color: var(--color-text-primary); /* text_color from buttons.secondary */
+  padding: 12px 20px; /* padding from buttons.secondary */
+  border-radius: var(--border-radius-md); /* radius from buttons.secondary */
+}
+
+.btn-secondary:hover {
+  background-color: #2A2A2A; /* hover_background from buttons.secondary */
+}
+
+/* Add more button styles if needed based on JSON (e.g., icon_button) */
+
+/* Add padding to main content to clear fixed nav */
 main {
-  padding-top: 60px; /* Add padding equal to the fixed nav height */
+  padding-top: var(--header-height); /* Add padding equal to the fixed nav height from JSON */
+  /* Adjust if nav height is different */
 }
 
-/* Sections */
+/* --- Sections --- */
+/* Basic styling for all sections */
+section {
+ padding: var(--spacing-xl) var(--spacing-md); /* Consistent padding for sections using spacing variables */
+ text-align: center; /* Center align content within sections */
+}
+
+/* --- Input Fields (Based on the JSON design system) --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background-color: var(--color-surface); /* Background from inputs */
+  color: var(--color-text-primary); /* text_color from inputs */
+  border: 1px solid var(--color-border); /* border_color from inputs */
+  border-radius: var(--border-radius-md); /* radius from inputs */
+  padding: var(--spacing-md); /* padding from inputs */
+  font-family: var(--font-family);
+  font-size: 16px; /* Consistent with body text or button size */
+  line-height: 1.5;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%; /* Make inputs take full width of their container */
+  margin-bottom: var(--spacing-md); /* Space between input fields */
+}
+
+/* Style for focus state */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary); /* Highlight with primary color on focus */
+  box-shadow: 0 0 0 2px rgba(var(--color-primary), 0.3); /* Subtle focus ring */
+}
+
+/* Adjust textarea for better usability */
+textarea {
+  min-height: 120px; /* Give textarea a default height */
+  resize: vertical; /* Allow vertical resizing only */
+}
 
 /* Video Background for Hero */
 #hero {
- position: relative; /* Needed for absolute positioning of the video */
- overflow: hidden; /* Hide video overflow */
- background-color: #e9ecef; /* Light grey background for hero */
- color: var(--heading-color);
- padding: 0; /* Remove padding here, content inside will have padding */
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+ position: relative;
+ overflow: hidden;
+ background-color: var(--lingui-light-grey); /* Fallback background */
+ background-color: var(--color-background); /* Background from layout.hero_section */
+ text-align: left; /* Text alignment from layout.hero_section */
+ padding: var(--spacing-xl) 0; /* Consistent padding top/bottom, 0 left/right for inner container */
+ display: flex; /* Use flexbox for centering content */
+ justify-content: center; /* Horizontally center content */
 }
 
 #hero video {
@@ -94,14 +240,20 @@ main {
  min-height: 100%;
  width: auto;
  height: auto;
- z-index: 1; /* Behind the content */
- object-fit: cover; /* Ensure video covers the area without distortion */
+ z-index: 1;
+ object-fit: cover; /* Ensure the video covers the container */
 }
 
 /* Overlay for text readability */
-section {
- padding: calc(4 * var(--spacing-unit)) 0; /* Restore padding for other sections */
- text-align: center;
+#hero .overlay {
+ position: absolute;
+ top: 0;
+ left: 0; /* Position at top-left */
+ width: 100%;
+ height: 100%;
+ background-color: rgba(var(--lingui-black), 0.5); /* Semi-transparent dark overlay */
+ background-color: rgba(0, 0, 0, 0.5); /* Using a hardcoded rgba for overlay, adjust as needed */
+ z-index: 2;
 }
 
 
@@ -119,28 +271,44 @@ section {
  animation: fadeIn 1s ease-in-out;
 }
 
-/* Container for Hero content and overlay */
+/* Container for Hero content to control width and spacing */
 #hero .hero-content {
  position: relative;
  z-index: 2; /* Above the video */
- padding: calc(8 * var(--spacing-unit)) var(--spacing-unit); /* Padding for content */
- background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white overlay */
- width: 100%; /* Ensure content container covers the width */
+ padding: 0 var(--spacing-md); /* Add horizontal padding */
+ max-width: 1200px; /* Max width from layout.hero_section */
+ width: 100%; /* Ensure it takes full width up to max-width */
+ display: flex;
+ flex-direction: column; /* Stack content vertically */
+ gap: var(--spacing-md); /* Spacing between elements from layout.hero_section */
+ text-align: var(--layout-hero-section-text-alignment, left); /* Use defined alignment or default */
+}
+
+/* Define CSS variables for layout from JSON */
+:root {
+  /* ... other variables ... */
+  --layout-header-height: 64px; /* Height from layout.header */
+  --layout-header-background: var(--color-background); /* Background from layout.header */
+  --layout-header-text-color: var(--color-text-primary); /* Text color from layout.header */
+
+  --layout-hero-section-background: var(--color-background); /* Background from layout.hero_section */
+  --layout-hero-section-text-alignment: left; /* Text alignment from layout.hero_section */
+  --layout-hero-section-spacing-between-elements: var(--spacing-md); /* Spacing from layout.hero_section */
+  --layout-hero-section-max-width: 1200px; /* Max width from layout.hero_section */
 }
 /* Responsive Design */
 @media (max-width: 768px) {
  nav ul {
  flex-direction: column;
- text-align: center; /* Center text in mobile view */
+ text-align: center;
  }
 
  nav ul li {
- margin: var(--spacing-unit) 0.5rem;
+ margin: var(--spacing-sm) 0.5rem;
  }
 
-
  section {
- padding: calc(2 * var(--spacing-unit)) 0;
+ padding: var(--spacing-lg) var(--spacing-md);
  }
 }
 
@@ -149,8 +317,8 @@ section {
  --spacing-unit: 0.8rem; /* Slightly smaller spacing on very small screens */
  }
 
- body {
- font-size: 0.95rem; /* Slightly smaller base font size */
- }
+  body {
+ font-size: 15px; /* Adjust font size for smaller screens */
+  }
 }
 

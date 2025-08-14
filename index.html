@@ -6,23 +6,27 @@
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/courses.html">Courses</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section id="hero">
-    <div class="video-background">
-      <video autoplay loop muted playsinline poster="/images/poster.jpg">
-        <source src="/videos/language-learning.mp4" type="video/mp4">
-        <source src="/videos/language-learning.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
+  <div class="page-container">
+    <header>
+      <nav aria-label="Main navigation">
+        <div class="container">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/courses.html">Courses</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="hero">
+      <div class="video-background">
+        <video autoplay loop muted playsinline poster="/images/poster.jpg">
+          <source src="/videos/language-learning.mp4" type="video/mp4">
+          <source src="/videos/language-learning.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
     <div class="hero-content">
       <h1>Learn Languages with Te Complemento</h1>
@@ -30,6 +34,7 @@
       <a href="/contact.html">Get Started</a>
     </div>
   </section>
+  </div>
 
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
