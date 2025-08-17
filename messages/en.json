@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "method": "Learning Method",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Master Languages with",
+      "subtitle": "Trianglais",
+      "description": "Learn English, French, and Spanish with our innovative and personalized teaching method. Transform your future through languages.",
+      "cta": "Start Learning",
+      "cta_secondary": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose Trianglais?",
+      "subtitle": "We offer a unique and effective learning experience",
+      "feature1": {
+        "title": "Innovative Method",
+        "description": "Our triangular approach combines conversation, grammar, and culture for complete learning."
+      },
+      "feature2": {
+        "title": "Native Teachers",
+        "description": "Learn from certified native speakers with years of teaching experience."
+      },
+      "feature3": {
+        "title": "Flexible Schedule",
+        "description": "Classes adapted to your schedule, both in-person and online."
+      }
+    },
+    "languages": {
+      "title": "Languages We Teach",
+      "english": "English",
+      "french": "French",
+      "spanish": "Spanish"
+    },
+    "cta": {
+      "title": "Ready to Start Your Language Journey?",
+      "description": "Join thousands of students who have transformed their lives learning languages with us.",
+      "button": "Get Started Today"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Trianglais",
+      "subtitle": "Connecting cultures through languages"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "At Trianglais, we believe that learning languages opens doors to new opportunities, cultures, and connections. Our mission is to provide high-quality, accessible, and effective language education that transforms lives."
+    },
+    "values": {
+      "title": "Our Values",
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for the highest quality in everything we do."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We constantly evolve our teaching methods to be more effective."
+      },
+      "inclusion": {
+        "title": "Inclusion",
+        "description": "We welcome students from all backgrounds and levels."
+      }
+    }
+  },
+  "method": {
+    "hero": {
+      "title": "Our Learning Method",
+      "subtitle": "The Triangular Approach to Language Learning"
+    },
+    "approach": {
+      "title": "The Trianglais Method",
+      "description": "Our unique triangular approach combines three fundamental pillars for effective language learning:",
+      "pillar1": {
+        "title": "Conversation",
+        "description": "Practice speaking from day one with interactive conversations and real-life scenarios."
+      },
+      "pillar2": {
+        "title": "Grammar",
+        "description": "Solid grammatical foundation taught in a practical and understandable way."
+      },
+      "pillar3": {
+        "title": "Culture",
+        "description": "Immerse yourself in the culture of the language to understand context and nuances."
+      }
+    },
+    "benefits": {
+      "title": "Benefits of Our Method",
+      "benefit1": "Faster learning through practical application",
+      "benefit2": "Better retention through cultural context",
+      "benefit3": "Increased confidence in real conversations",
+      "benefit4": "Personalized learning adapted to your pace"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to help you start your language journey"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "language": "Language of Interest",
+      "message": "Message",
+      "submit": "Send Message",
+      "select_language": "Select a language"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "address": "123 Language Street, Learning City, LC 12345",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@trianglais.com",
+      "hours": "Monday - Friday: 9:00 AM - 8:00 PM"
+    }
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "contact_us": "Contact Us",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!"
+  }
+}

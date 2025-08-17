@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "method": "Méthode d'Apprentissage",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Maîtrisez les Langues avec",
+      "subtitle": "Trianglais",
+      "description": "Apprenez l'anglais, le français et l'espagnol avec notre méthode innovante et personnalisée. Transformez votre avenir grâce aux langues.",
+      "cta": "Commencer à Apprendre",
+      "cta_secondary": "En Savoir Plus"
+    },
+    "features": {
+      "title": "Pourquoi Choisir Trianglais ?",
+      "subtitle": "Nous offrons une expérience d'apprentissage unique et efficace",
+      "feature1": {
+        "title": "Méthode Innovante",
+        "description": "Notre approche triangulaire combine conversation, grammaire et culture pour un apprentissage complet."
+      },
+      "feature2": {
+        "title": "Professeurs Natifs",
+        "description": "Apprenez avec des locuteurs natifs certifiés ayant des années d'expérience d'enseignement."
+      },
+      "feature3": {
+        "title": "Horaire Flexible",
+        "description": "Cours adaptés à votre emploi du temps, en présentiel et en ligne."
+      }
+    },
+    "languages": {
+      "title": "Langues que Nous Enseignons",
+      "english": "Anglais",
+      "french": "Français",
+      "spanish": "Espagnol"
+    },
+    "cta": {
+      "title": "Prêt à Commencer Votre Voyage Linguistique ?",
+      "description": "Rejoignez des milliers d'étudiants qui ont transformé leur vie en apprenant les langues avec nous.",
+      "button": "Commencer Aujourd'hui"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À Propos de Trianglais",
+      "subtitle": "Connecter les cultures à travers les langues"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Chez Trianglais, nous croyons que l'apprentissage des langues ouvre des portes vers de nouvelles opportunités, cultures et connexions. Notre mission est de fournir une éducation linguistique de haute qualité, accessible et efficace qui transforme les vies."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons la plus haute qualité dans tout ce que nous faisons."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous faisons constamment évoluer nos méthodes d'enseignement pour être plus efficaces."
+      },
+      "inclusion": {
+        "title": "Inclusion",
+        "description": "Nous accueillons les étudiants de tous horizons et niveaux."
+      }
+    }
+  },
+  "method": {
+    "hero": {
+      "title": "Notre Méthode d'Apprentissage",
+      "subtitle": "L'Approche Triangulaire pour l'Apprentissage des Langues"
+    },
+    "approach": {
+      "title": "La Méthode Trianglais",
+      "description": "Notre approche triangulaire unique combine trois piliers fondamentaux pour un apprentissage efficace des langues :",
+      "pillar1": {
+        "title": "Conversation",
+        "description": "Pratiquez la parole dès le premier jour avec des conversations interactives et des scénarios de la vie réelle."
+      },
+      "pillar2": {
+        "title": "Grammaire",
+        "description": "Base grammaticale solide enseignée de manière pratique et compréhensible."
+      },
+      "pillar3": {
+        "title": "Culture",
+        "description": "Immergez-vous dans la culture de la langue pour comprendre le contexte et les nuances."
+      }
+    },
+    "benefits": {
+      "title": "Avantages de Notre Méthode",
+      "benefit1": "Apprentissage plus rapide grâce à l'application pratique",
+      "benefit2": "Meilleure rétention grâce au contexte culturel",
+      "benefit3": "Plus de confiance dans les conversations réelles",
+      "benefit4": "Apprentissage personnalisé adapté à votre rythme"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactez-Nous",
+      "subtitle": "Nous sommes là pour vous aider à commencer votre voyage linguistique"
+    },
+    "form": {
+      "name": "Nom Complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "language": "Langue d'Intérêt",
+      "message": "Message",
+      "submit": "Envoyer le Message",
+      "select_language": "Sélectionnez une langue"
+    },
+    "info": {
+      "title": "Entrer en Contact",
+      "address": "123 Rue des Langues, Ville d'Apprentissage, VA 12345",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@trianglais.com",
+      "hours": "Lundi - Vendredi : 9h00 - 20h00"
+    }
+  },
+  "common": {
+    "learn_more": "En Savoir Plus",
+    "get_started": "Commencer",
+    "contact_us": "Nous Contacter",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès !"
+  }
+}
